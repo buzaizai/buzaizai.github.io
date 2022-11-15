@@ -1,0 +1,285 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>linux常用命令 | jiakun`Blog</title><meta name="keywords" content="linux"><meta name="author" content="不在在"><meta name="copyright" content="不在在"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="1. pwd command使用pwd命令找出您所在的当前工作目录（文件夹）的路径。该命令将返回绝对（完整）路径，基本上是所有目录中以正斜杠（&#x2F;）开头的路径，绝对路径的示例是&#x2F; home &#x2F; username。 2. cd command要浏览Linux文件和目录，请使用cd命令。它需要完整路径或目录名称，具体取决于您所在的当前工作目录。 另一种情况是，如果您想切换到">
+<meta property="og:type" content="article">
+<meta property="og:title" content="linux常用命令">
+<meta property="og:url" content="http://example.com/posts/fe4ef317.html">
+<meta property="og:site_name" content="jiakun&#96;Blog">
+<meta property="og:description" content="1. pwd command使用pwd命令找出您所在的当前工作目录（文件夹）的路径。该命令将返回绝对（完整）路径，基本上是所有目录中以正斜杠（&#x2F;）开头的路径，绝对路径的示例是&#x2F; home &#x2F; username。 2. cd command要浏览Linux文件和目录，请使用cd命令。它需要完整路径或目录名称，具体取决于您所在的当前工作目录。 另一种情况是，如果您想切换到">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://s1.imagehub.cc/images/2022/10/04/d7557e191efaa84bb0d3d48ebca71570.jpg">
+<meta property="article:published_time" content="2022-10-19T08:28:58.000Z">
+<meta property="article:modified_time" content="2022-11-14T11:12:52.786Z">
+<meta property="article:author" content="不在在">
+<meta property="article:tag" content="linux">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s1.imagehub.cc/images/2022/10/04/d7557e191efaa84bb0d3d48ebca71570.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/posts/fe4ef317"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"limitCount":50,"languages":{"author":"作者: 不在在","link":"链接: ","source":"来源: jiakun`Blog","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#1f1f1f","position":"bottom-left"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'linux常用命令',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-11-14 19:12:52'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" href="/css/dynamic background.css"><link rel="stylesheet" href="/css/mouse.css"><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="jiakun`Blog" type="application/atom+xml">
+</head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://s1.imagehub.cc/images/2022/10/02/ecb8ad6dfa2581e5377ce3a041ebc59.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">10</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">4</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">1</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-graduation-cap"></i><span> 博文</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/"><i class="fa-fw fa fa-archive"></i><span> 分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fa fa-folder-open"></i><span> 归档</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 生活</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/shuoshuo/"><i class="fa-fw fa fa-comments-o"></i><span> 分享</span></a></li><li><a class="site-page child" href="/photos/"><i class="fa-fw fa fa-camera-retro"></i><span> 相册</span></a></li><li><a class="site-page child" href="/music/"><i class="fa-fw fa fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 影视</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/comment/"><i class="fa-fw fa fa-paper-plane"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于笔者</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://s1.imagehub.cc/images/2022/10/04/d7557e191efaa84bb0d3d48ebca71570.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">jiakun`Blog</a></span><div id="he-plugin-simple"> </div><div id="none_space"></div><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-graduation-cap"></i><span> 博文</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/"><i class="fa-fw fa fa-archive"></i><span> 分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fa fa-folder-open"></i><span> 归档</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 生活</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/shuoshuo/"><i class="fa-fw fa fa-comments-o"></i><span> 分享</span></a></li><li><a class="site-page child" href="/photos/"><i class="fa-fw fa fa-camera-retro"></i><span> 相册</span></a></li><li><a class="site-page child" href="/music/"><i class="fa-fw fa fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 影视</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/comment/"><i class="fa-fw fa fa-paper-plane"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于笔者</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">linux常用命令</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-10-19T08:28:58.000Z" title="发表于 2022-10-19 16:28:58">2022-10-19</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-11-14T11:12:52.786Z" title="更新于 2022-11-14 19:12:52">2022-11-14</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">2k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>6分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="linux常用命令"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h3 id="1-pwd-command"><a href="#1-pwd-command" class="headerlink" title="1. pwd command"></a>1. pwd command</h3><p>使用pwd命令找出您所在的当前工作目录（文件夹）的路径。该命令将返回绝对（完整）路径，基本上是所有目录中以正斜杠（&#x2F;）开头的路径，绝对路径的示例是&#x2F; home &#x2F; username。</p>
+<h3 id="2-cd-command"><a href="#2-cd-command" class="headerlink" title="2. cd command"></a>2. cd command</h3><p>要浏览Linux文件和目录，请使用cd命令。它需要完整路径或目录名称，具体取决于您所在的当前工作目录。</p>
+<p>另一种情况是，如果您想切换到一个全新的目录，例如&#x2F; home &#x2F; username &#x2F; Movies。在这种情况下，您必须键入cd，然后键入目录的绝对路径：cd &#x2F; home &#x2F; username &#x2F; Movies。</p>
+<h3 id="3-ls-command"><a href="#3-ls-command" class="headerlink" title="3. ls command"></a>3. ls command</h3><p>的LS命令用于查看目录的内容。默认情况下，此命令将显示当前工作目录的内容。如果要查看其他目录的内容，请键入ls，然后键入目录的路径。例如，输入LS &#x2F;home&#x2F;username&#x2F;Documents查看的内容的文件。</p>
+<h3 id="4-cat-command"><a href="#4-cat-command" class="headerlink" title="4. cat command"></a>4. cat command</h3><p>cat是Linux中最常用的命令之一。它用于在标准输出（sdout）上列出文件的内容。要运行此命令，请键入cat，然后输入文件名及其扩展名。例如：cat file.txt。</p>
+<h3 id="5-cp-command"><a href="#5-cp-command" class="headerlink" title="5. cp command"></a>5. cp command</h3><p>使用cp命令将文件从当前目录复制到另一个目录。例如，命令cp scenery.jpg &#x2F; home &#x2F; username &#x2F; Pictures将在您的Pictures目录中（从您的当前目录创建）scenery.jpg的副本。</p>
+<h3 id="6-mv-command"><a href="#6-mv-command" class="headerlink" title="6. mv command"></a>6. mv command</h3><p>mv命令的主要用途是移动文件，尽管它也可以用于重命名文件。</p>
+<h3 id="7-mkdir-command"><a href="#7-mkdir-command" class="headerlink" title="7. mkdir command"></a>7. mkdir command</h3><p>使用mkdir命令创建一个新目录-如果键入mkdir Music，它将创建一个名为Music的目录。要在另一个目录中生成新目录，请使用此Linux基本命令mkdir Music &#x2F; Newfile使用 p选项在两个现有目录之间创建目录。例如，mkdir -p Music &#x2F; 2020 &#x2F; Newfile将创建新的“ 2020”文件。</p>
+<h3 id="8-rmdir-command"><a href="#8-rmdir-command" class="headerlink" title="8. rmdir command"></a>8. rmdir command</h3><p>如果需要删除目录，请使用rmdir命令。但是，rmdir仅允许您删除空目录。</p>
+<h3 id="9-rm-command"><a href="#9-rm-command" class="headerlink" title="9. rm command"></a>9. rm command</h3><p>该RM命令用于删除目录以及其中的内容。如果只想删除目录（作为rmdir的替代方法），请使用rm -r。不过，使用此命令时要格外小心，并仔细检查您所在的目录。这将删除所有内容，并且没有恢复的选项。</p>
+<h3 id="10-touch-command"><a href="#10-touch-command" class="headerlink" title="10. touch command"></a>10. touch command</h3><p>该触摸命令允许您创建通过Linux命令行新的空白文件。例如，输入touch &#x2F;home&#x2F;username&#x2F;Documents&#x2F;Web.html在Documents目录下创建一个名为Web的HTML文件。</p>
+<h3 id="11-locate-command"><a href="#11-locate-command" class="headerlink" title="11. locate command"></a>11. locate command</h3><p>您可以使用此命令来定位文件，就像Windows中的搜索命令一样。此外，将-i参数与该命令一起使用将使其不区分大小写，因此即使您不记得其确切名称，也可以搜索文件。</p>
+<h3 id="12-find-command"><a href="#12-find-command" class="headerlink" title="12. find command"></a>12. find command</h3><p>类似于locate命令，使用 find还可以搜索文件和目录。区别在于，您可以使用find命令在给定目录中查找文件。例如，find &#x2F; home &#x2F; -name notes.txt命令将在主目录及其子目录中搜索名为notes.txt的文件。</p>
+<h3 id="13-grep-command"><a href="#13-grep-command" class="headerlink" title="13. grep command"></a>13. grep command</h3><p>无疑对日常使用有用的另一个基本Linux命令是grep。它使您可以搜索给定文件中的所有文本。为了说明这一点，grep blue notepad.txt将在记事本文件中搜索单词blue。包含搜索到的单词的行将被完整显示。</p>
+<h3 id="14-sudo-command"><a href="#14-sudo-command" class="headerlink" title="14. sudo command"></a>14. sudo command</h3><p>该命令是“ SuperUser Do ”的缩写，使您能够执行需要管理或超级用户权限的任务。但是，建议不要将此命令用于日常使用，因为如果您做错了什么，很容易发生错误。</p>
+<h3 id="15-df-command"><a href="#15-df-command" class="headerlink" title="15. df command"></a>15. df command</h3><p>使用df命令获取有关系统磁盘空间使用情况的报告，以百分比和KB表示。如果要以兆字节为单位查看报告，请输入df -m。</p>
+<h3 id="16-du-command"><a href="#16-du-command" class="headerlink" title="16. du command"></a>16. du command</h3><p>如果要检查文件或目录占用了多少空间，答案是du（磁盘使用情况）命令。但是，磁盘使用情况摘要将显示磁盘块号，而不是通常的大小格式。如果要以字节，千字节和兆字节为单位查看它，请在命令行中添加-h参数。</p>
+<h3 id="17-head-command"><a href="#17-head-command" class="headerlink" title="17. head command"></a>17. head command</h3><p>所述head command用于查看任何文本文件的第一行。默认情况下，它将显示前十行，但是您可以根据自己的喜好更改此数字。例如，如果只想显示前五行，则键入head -n 5 filename.ext。</p>
+<h3 id="18-tail-command"><a href="#18-tail-command" class="headerlink" title="18. tail command"></a>18. tail command</h3><p>该命令的功能与head命令类似，但是tail命令将显示文本文件的最后十行，而不是显示第一行。例如，tail -n filename.ext。</p>
+<h3 id="19-diff-command"><a href="#19-diff-command" class="headerlink" title="19. diff command"></a>19. diff command</h3><p>diff命令是差异的缩写，diff命令逐行比较两个文件的内容。分析文件后，它将输出不匹配的行。程序员在需要更改程序而不是重写整个源代码时经常使用此命令。</p>
+<h3 id="20-tar-command"><a href="#20-tar-command" class="headerlink" title="20. tar command"></a>20. tar command</h3><p>该命令是最常用的命令归档多个文件到一个压缩包-类似于zip格式常见的Linux文件格式，压缩是可选的。</p>
+<h3 id="21-chmod-command"><a href="#21-chmod-command" class="headerlink" title="21. chmod command"></a>21. chmod command</h3><p>chmod是另一个Linux命令，用于更改文件和目录的读取，写入和执行权限。由于此命令相当复杂，因此您可以阅读完整的教程以正确执行它。</p>
+<h3 id="22-chown-command"><a href="#22-chown-command" class="headerlink" title="22. chown command"></a>22. chown command</h3><p>在Linux中，所有文件均归特定用户所有。该CHOWN命令使您可以更改或文件的所有权转让给指定的用户名。例如，chown linuxuser2 file.ext将使linuxuser2成为file.ext的所有者。</p>
+<h3 id="23-Jobs-command"><a href="#23-Jobs-command" class="headerlink" title="23. Jobs command"></a>23. Jobs command</h3><p>jobs命令将显示所有当前作业及其状态。作业基本上是由Shell启动的进程。</p>
+<h3 id="24-kill-command"><a href="#24-kill-command" class="headerlink" title="24. kill command"></a>24. kill command</h3><p>如果您的程序无响应，则可以使用kill命令手动终止它。它将向运行不正常的应用发送特定信号，并指示该应用自行终止。</p>
+<h3 id="25-ping-command"><a href="#25-ping-command" class="headerlink" title="25. ping command"></a>25. ping command</h3><p>使用ping命令检查与服务器的连接状态。例如，只需输入ping <a target="_blank" rel="noopener" href="http://google.com,该命令将检查您是否能够连接到google并测量响应时间./">http://google.com，该命令将检查您是否能够连接到Google并测量响应时间。</a></p>
+<h3 id="26-wget-command"><a href="#26-wget-command" class="headerlink" title="26. wget command"></a>26. wget command</h3><p>Linux命令行非常有用-您甚至可以在wget命令的帮助下从Internet下载文件。为此，只需键入wget，然后输入下载链接。</p>
+<h3 id="27-uname-command"><a href="#27-uname-command" class="headerlink" title="27. uname command"></a>27. uname command</h3><p>该UNAME命令，短期对于Unix名，将打印您的Linux系统，如计算机名称的详细信息，操作系统，内核，等等。</p>
+<h3 id="28-top-command"><a href="#28-top-command" class="headerlink" title="28. top command"></a>28. top command</h3><p>作为与Windows中的任务管理器等效的终端，top命令将显示正在运行的进程以及每个进程使用多少CPU的列表。监视系统资源的使用非常有用，尤其是知道哪个进程由于消耗太多资源而需要终止时。</p>
+<h3 id="29-history-command"><a href="#29-history-command" class="headerlink" title="29. history command"></a>29. history command</h3><p>使用Linux一段时间后，您会很快注意到每天可以运行数百个命令。因此，如果您想查看之前输入的命令，运行历史记录命令特别有用。</p>
+<h3 id="30-man-command"><a href="#30-man-command" class="headerlink" title="30. man command"></a>30. man command</h3><p>对某些Linux命令的功能感到困惑？不用担心，您可以使用man命令从Linux的外壳中轻松学习如何使用它们。例如，输入man tail将显示tail命令的手动指令。</p>
+<h3 id="31-echo-command"><a href="#31-echo-command" class="headerlink" title="31. echo command"></a>31. echo command</h3><p>此命令用于将一些数据移到文件中。例如，如果要将文本“ Hello，我的名字叫约翰”添加到名为name.txt的文件中，则可以键入echo Hello，我的名字是John &gt;&gt; name.txt</p>
+<h3 id="32-zip，unzip-command"><a href="#32-zip，unzip-command" class="headerlink" title="32. zip，unzip command"></a>32. zip，unzip command</h3><p>使用zip命令将文件压缩到zip存档中，然后使用unzip命令从zip存档中提取压缩文件。</p>
+<h3 id="33-hostname-command"><a href="#33-hostname-command" class="headerlink" title="33. hostname command"></a>33. hostname command</h3><p>如果您想知道主机&#x2F;网络的名称，只需键入hostname。在末尾添加-I将显示网络的IP地址。</p>
+<h3 id="34-useradd，userdel-command"><a href="#34-useradd，userdel-command" class="headerlink" title="34. useradd，userdel command"></a>34. useradd，userdel command</h3><p>由于Linux是多用户系统，因此这意味着多个人可以同时与同一个系统进行交互。useradd用于创建新用户，而passwd将密码添加到该用户的帐户。要添加一个名为John的新用户，请添加user John，然后添加其密码类型passwd 123456789。</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="http://example.com">不在在</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://example.com/posts/fe4ef317.html">http://example.com/posts/fe4ef317.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://example.com" target="_blank">jiakun`Blog</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/linux/">linux</a></div><div class="post_share"><div class="social-share" data-image="https://s1.imagehub.cc/images/2022/10/04/d7557e191efaa84bb0d3d48ebca71570.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/posts/cd52224a.html"><img class="prev-cover" src="https://s1.imagehub.cc/images/2022/10/04/d7557e191efaa84bb0d3d48ebca71570.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">music</div></div></a></div><div class="next-post pull-right"><a href="/posts/5b05f2f.html"><img class="next-cover" src="https://s1.imagehub.cc/images/2022/10/04/26c0d0074c189f1abd4b8687346e4de6.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">辗转相除法</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://s1.imagehub.cc/images/2022/10/02/ecb8ad6dfa2581e5377ce3a041ebc59.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">不在在</div><div class="author-info__description">一个有趣的博客</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">10</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">4</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">1</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/buzaizai"><i class="fab fa-github"></i><span>My Github</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="mailto:2164820351@qq.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="http://wpa.qq.com/msgrd?v=3&amp;uin=2164820351&amp;site=qq&amp;menu=yes" target="_blank" title="QQ"><i class="fab fa-qq"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">欢迎来到我的博客</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-pwd-command"><span class="toc-number">1.</span> <span class="toc-text">1. pwd command</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-cd-command"><span class="toc-number">2.</span> <span class="toc-text">2. cd command</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-ls-command"><span class="toc-number">3.</span> <span class="toc-text">3. ls command</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-cat-command"><span class="toc-number">4.</span> <span class="toc-text">4. cat command</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-cp-command"><span class="toc-number">5.</span> <span class="toc-text">5. cp command</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-mv-command"><span class="toc-number">6.</span> <span class="toc-text">6. mv command</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-mkdir-command"><span class="toc-number">7.</span> <span class="toc-text">7. mkdir command</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-rmdir-command"><span class="toc-number">8.</span> <span class="toc-text">8. rmdir command</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-rm-command"><span class="toc-number">9.</span> <span class="toc-text">9. rm command</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#10-touch-command"><span class="toc-number">10.</span> <span class="toc-text">10. touch command</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#11-locate-command"><span class="toc-number">11.</span> <span class="toc-text">11. locate command</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#12-find-command"><span class="toc-number">12.</span> <span class="toc-text">12. find command</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#13-grep-command"><span class="toc-number">13.</span> <span class="toc-text">13. grep command</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#14-sudo-command"><span class="toc-number">14.</span> <span class="toc-text">14. sudo command</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#15-df-command"><span class="toc-number">15.</span> <span class="toc-text">15. df command</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#16-du-command"><span class="toc-number">16.</span> <span class="toc-text">16. du command</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#17-head-command"><span class="toc-number">17.</span> <span class="toc-text">17. head command</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#18-tail-command"><span class="toc-number">18.</span> <span class="toc-text">18. tail command</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#19-diff-command"><span class="toc-number">19.</span> <span class="toc-text">19. diff command</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#20-tar-command"><span class="toc-number">20.</span> <span class="toc-text">20. tar command</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#21-chmod-command"><span class="toc-number">21.</span> <span class="toc-text">21. chmod command</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#22-chown-command"><span class="toc-number">22.</span> <span class="toc-text">22. chown command</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#23-Jobs-command"><span class="toc-number">23.</span> <span class="toc-text">23. Jobs command</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#24-kill-command"><span class="toc-number">24.</span> <span class="toc-text">24. kill command</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#25-ping-command"><span class="toc-number">25.</span> <span class="toc-text">25. ping command</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#26-wget-command"><span class="toc-number">26.</span> <span class="toc-text">26. wget command</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#27-uname-command"><span class="toc-number">27.</span> <span class="toc-text">27. uname command</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#28-top-command"><span class="toc-number">28.</span> <span class="toc-text">28. top command</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#29-history-command"><span class="toc-number">29.</span> <span class="toc-text">29. history command</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#30-man-command"><span class="toc-number">30.</span> <span class="toc-text">30. man command</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#31-echo-command"><span class="toc-number">31.</span> <span class="toc-text">31. echo command</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#32-zip%EF%BC%8Cunzip-command"><span class="toc-number">32.</span> <span class="toc-text">32. zip，unzip command</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#33-hostname-command"><span class="toc-number">33.</span> <span class="toc-text">33. hostname command</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#34-useradd%EF%BC%8Cuserdel-command"><span class="toc-number">34.</span> <span class="toc-text">34. useradd，userdel command</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/posts/5b05f2f.html" title="辗转相除法"><img src="https://s1.imagehub.cc/images/2022/10/04/26c0d0074c189f1abd4b8687346e4de6.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="辗转相除法"/></a><div class="content"><a class="title" href="/posts/5b05f2f.html" title="辗转相除法">辗转相除法</a><time datetime="2022-11-14T11:15:29.000Z" title="发表于 2022-11-14 19:15:29">2022-11-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/fe4ef317.html" title="linux常用命令"><img src="https://s1.imagehub.cc/images/2022/10/04/d7557e191efaa84bb0d3d48ebca71570.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="linux常用命令"/></a><div class="content"><a class="title" href="/posts/fe4ef317.html" title="linux常用命令">linux常用命令</a><time datetime="2022-10-19T08:28:58.000Z" title="发表于 2022-10-19 16:28:58">2022-10-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/cd52224a.html" title="music"><img src="https://s1.imagehub.cc/images/2022/10/04/d7557e191efaa84bb0d3d48ebca71570.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="music"/></a><div class="content"><a class="title" href="/posts/cd52224a.html" title="music">music</a><time datetime="2022-10-11T11:34:27.000Z" title="发表于 2022-10-11 19:34:27">2022-10-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/711a0338.html" title="WEB浏览器服务器区别"><img src="https://s1.imagehub.cc/images/2022/10/04/00d98a0e4a4a5f0e24dd1bc805a1d135.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="WEB浏览器服务器区别"/></a><div class="content"><a class="title" href="/posts/711a0338.html" title="WEB浏览器服务器区别">WEB浏览器服务器区别</a><time datetime="2022-10-10T10:42:43.000Z" title="发表于 2022-10-10 18:42:43">2022-10-10</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/e269f686.html" title="blbl"><img src="https://s1.imagehub.cc/images/2022/10/04/00d98a0e4a4a5f0e24dd1bc805a1d135.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="blbl"/></a><div class="content"><a class="title" href="/posts/e269f686.html" title="blbl">blbl</a><time datetime="2022-10-05T13:18:26.000Z" title="发表于 2022-10-05 21:18:26">2022-10-05</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('https://s1.imagehub.cc/images/2022/10/04/d7557e191efaa84bb0d3d48ebca71570.jpg')"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By 不在在</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">I wish you to become your own sun, no need to rely on who's light.</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="chat_btn" type="button" title="聊天"><i class="fas fa-sms"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script src="/js/search/local-search.js"></script><script>var preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',preloader.endLoading())</script><div class="js-pjax"></div><script src="/js/snowflake.js"></script><script src="https://widget.qweather.net/simple/static/js/he-simple-common.js?v=2.0"></script><script src="/js/weather.js"></script><script defer="defer" id="fluttering_ribbon" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-fluttering-ribbon.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script id="click-heart" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/click-heart.min.js" async="async" mobile="true"></script><script src="//code.tidio.co/zthpt6f4tnodhxtx4umtjlnmrdqlnmza.js" async="async"></script><script>function onTidioChatApiReady() {
+  window.tidioChatApi.hide();
+  window.tidioChatApi.on("close", function() {
+    window.tidioChatApi.hide();
+  });
+}
+if (window.tidioChatApi) {
+  window.tidioChatApi.on("ready", onTidioChatApiReady);
+} else {
+  document.addEventListener("tidioChat-ready", onTidioChatApiReady);
+}
+
+var chatBtnFn = () => {
+  document.getElementById("chat_btn").addEventListener("click", function(){
+    window.tidioChatApi.show();
+    window.tidioChatApi.open();
+  });
+}
+chatBtnFn()
+</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/metingjs/dist/Meting.min.js"></script><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"]):not([href="/music/"]):not([href="/no-pjax/"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+
+  // removeEventListener scroll 
+  window.tocScrollFn && window.removeEventListener('scroll', window.tocScrollFn)
+  window.scrollCollect && window.removeEventListener('scroll', scrollCollect)
+
+  typeof preloader === 'object' && preloader.initLoading()
+  document.getElementById('rightside').style.cssText = "opacity: ''; transform: ''"
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+
+  typeof disqusjs === 'object' && disqusjs.destroy()
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof chatBtnFn === 'function' && chatBtnFn()
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+
+  typeof preloader === 'object' && preloader.endLoading()
+})
+
+document.addEventListener('pjax:error', (e) => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"jsonPath":"/live2dw/assets/haruto.model.json"},"display":{"position":"left","width":150,"height":300},"mobile":{"show":false},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body></html>

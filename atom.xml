@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>jiakun`Blog</title>
+  
+  <subtitle>不在在</subtitle>
+  <link href="http://example.com/atom.xml" rel="self"/>
+  
+  <link href="http://example.com/"/>
+  <updated>2022-11-14T11:18:38.941Z</updated>
+  <id>http://example.com/</id>
+  
+  <author>
+    <name>不在在</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>辗转相除法</title>
+    <link href="http://example.com/posts/5b05f2f.html"/>
+    <id>http://example.com/posts/5b05f2f.html</id>
+    <published>2022-11-14T11:15:29.000Z</published>
+    <updated>2022-11-14T11:18:38.941Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="求最大公约数"><a href="#求最大公约数" class="headerlink" title="求最大公约数"></a>求最大公约数</h2><p>欧几里得算法又称辗转相除法，是指用于计算两个非负整数a，b的最大公约数。应用领域有数学和计算机两个方面。计算公式gcd(a,b) &#x3D; gcd(b,a mod b)。</p><p>例如：假如需要求 100 和18 两个正整数的最大公约数,用欧几里得算法，是这样进行的：<br>100 &#x2F; 18 &#x3D; 5 (余 10)<br>18 &#x2F; 10&#x3D; 1(余8)<br>10 &#x2F; 8 &#x3D; 1(余2)<br>8 &#x2F; 2 &#x3D; 4 (余0)<br>至此，最大公约数为2</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;求最大公约数&quot;&gt;&lt;a href=&quot;#求最大公约数&quot; class=&quot;headerlink&quot; title=&quot;求最大公约数&quot;&gt;&lt;/a&gt;求最大公约数&lt;/h2&gt;&lt;p&gt;欧几里得算法又称辗转相除法，是指用于计算两个非负整数a，b的最大公约数。应用领域有数学和计算机两个方面。计算</summary>
+      
+    
+    
+    
+    
+    <category term="C" scheme="http://example.com/tags/C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>linux常用命令</title>
+    <link href="http://example.com/posts/fe4ef317.html"/>
+    <id>http://example.com/posts/fe4ef317.html</id>
+    <published>2022-10-19T08:28:58.000Z</published>
+    <updated>2022-11-14T11:12:52.786Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="1-pwd-command"><a href="#1-pwd-command" class="headerlink" title="1. pwd command"></a>1. pwd command</h3><p>使用pwd命令找出您所在的当前工作目录（文件夹）的路径。该命令将返回绝对（完整）路径，基本上是所有目录中以正斜杠（&#x2F;）开头的路径，绝对路径的示例是&#x2F; home &#x2F; username。</p><h3 id="2-cd-command"><a href="#2-cd-command" class="headerlink" title="2. cd command"></a>2. cd command</h3><p>要浏览Linux文件和目录，请使用cd命令。它需要完整路径或目录名称，具体取决于您所在的当前工作目录。</p><p>另一种情况是，如果您想切换到一个全新的目录，例如&#x2F; home &#x2F; username &#x2F; Movies。在这种情况下，您必须键入cd，然后键入目录的绝对路径：cd &#x2F; home &#x2F; username &#x2F; Movies。</p><h3 id="3-ls-command"><a href="#3-ls-command" class="headerlink" title="3. ls command"></a>3. ls command</h3><p>的LS命令用于查看目录的内容。默认情况下，此命令将显示当前工作目录的内容。如果要查看其他目录的内容，请键入ls，然后键入目录的路径。例如，输入LS &#x2F;home&#x2F;username&#x2F;Documents查看的内容的文件。</p><h3 id="4-cat-command"><a href="#4-cat-command" class="headerlink" title="4. cat command"></a>4. cat command</h3><p>cat是Linux中最常用的命令之一。它用于在标准输出（sdout）上列出文件的内容。要运行此命令，请键入cat，然后输入文件名及其扩展名。例如：cat file.txt。</p><h3 id="5-cp-command"><a href="#5-cp-command" class="headerlink" title="5. cp command"></a>5. cp command</h3><p>使用cp命令将文件从当前目录复制到另一个目录。例如，命令cp scenery.jpg &#x2F; home &#x2F; username &#x2F; Pictures将在您的Pictures目录中（从您的当前目录创建）scenery.jpg的副本。</p><h3 id="6-mv-command"><a href="#6-mv-command" class="headerlink" title="6. mv command"></a>6. mv command</h3><p>mv命令的主要用途是移动文件，尽管它也可以用于重命名文件。</p><h3 id="7-mkdir-command"><a href="#7-mkdir-command" class="headerlink" title="7. mkdir command"></a>7. mkdir command</h3><p>使用mkdir命令创建一个新目录-如果键入mkdir Music，它将创建一个名为Music的目录。要在另一个目录中生成新目录，请使用此Linux基本命令mkdir Music &#x2F; Newfile使用 p选项在两个现有目录之间创建目录。例如，mkdir -p Music &#x2F; 2020 &#x2F; Newfile将创建新的“ 2020”文件。</p><h3 id="8-rmdir-command"><a href="#8-rmdir-command" class="headerlink" title="8. rmdir command"></a>8. rmdir command</h3><p>如果需要删除目录，请使用rmdir命令。但是，rmdir仅允许您删除空目录。</p><h3 id="9-rm-command"><a href="#9-rm-command" class="headerlink" title="9. rm command"></a>9. rm command</h3><p>该RM命令用于删除目录以及其中的内容。如果只想删除目录（作为rmdir的替代方法），请使用rm -r。不过，使用此命令时要格外小心，并仔细检查您所在的目录。这将删除所有内容，并且没有恢复的选项。</p><h3 id="10-touch-command"><a href="#10-touch-command" class="headerlink" title="10. touch command"></a>10. touch command</h3><p>该触摸命令允许您创建通过Linux命令行新的空白文件。例如，输入touch &#x2F;home&#x2F;username&#x2F;Documents&#x2F;Web.html在Documents目录下创建一个名为Web的HTML文件。</p><h3 id="11-locate-command"><a href="#11-locate-command" class="headerlink" title="11. locate command"></a>11. locate command</h3><p>您可以使用此命令来定位文件，就像Windows中的搜索命令一样。此外，将-i参数与该命令一起使用将使其不区分大小写，因此即使您不记得其确切名称，也可以搜索文件。</p><h3 id="12-find-command"><a href="#12-find-command" class="headerlink" title="12. find command"></a>12. find command</h3><p>类似于locate命令，使用 find还可以搜索文件和目录。区别在于，您可以使用find命令在给定目录中查找文件。例如，find &#x2F; home &#x2F; -name notes.txt命令将在主目录及其子目录中搜索名为notes.txt的文件。</p><h3 id="13-grep-command"><a href="#13-grep-command" class="headerlink" title="13. grep command"></a>13. grep command</h3><p>无疑对日常使用有用的另一个基本Linux命令是grep。它使您可以搜索给定文件中的所有文本。为了说明这一点，grep blue notepad.txt将在记事本文件中搜索单词blue。包含搜索到的单词的行将被完整显示。</p><h3 id="14-sudo-command"><a href="#14-sudo-command" class="headerlink" title="14. sudo command"></a>14. sudo command</h3><p>该命令是“ SuperUser Do ”的缩写，使您能够执行需要管理或超级用户权限的任务。但是，建议不要将此命令用于日常使用，因为如果您做错了什么，很容易发生错误。</p><h3 id="15-df-command"><a href="#15-df-command" class="headerlink" title="15. df command"></a>15. df command</h3><p>使用df命令获取有关系统磁盘空间使用情况的报告，以百分比和KB表示。如果要以兆字节为单位查看报告，请输入df -m。</p><h3 id="16-du-command"><a href="#16-du-command" class="headerlink" title="16. du command"></a>16. du command</h3><p>如果要检查文件或目录占用了多少空间，答案是du（磁盘使用情况）命令。但是，磁盘使用情况摘要将显示磁盘块号，而不是通常的大小格式。如果要以字节，千字节和兆字节为单位查看它，请在命令行中添加-h参数。</p><h3 id="17-head-command"><a href="#17-head-command" class="headerlink" title="17. head command"></a>17. head command</h3><p>所述head command用于查看任何文本文件的第一行。默认情况下，它将显示前十行，但是您可以根据自己的喜好更改此数字。例如，如果只想显示前五行，则键入head -n 5 filename.ext。</p><h3 id="18-tail-command"><a href="#18-tail-command" class="headerlink" title="18. tail command"></a>18. tail command</h3><p>该命令的功能与head命令类似，但是tail命令将显示文本文件的最后十行，而不是显示第一行。例如，tail -n filename.ext。</p><h3 id="19-diff-command"><a href="#19-diff-command" class="headerlink" title="19. diff command"></a>19. diff command</h3><p>diff命令是差异的缩写，diff命令逐行比较两个文件的内容。分析文件后，它将输出不匹配的行。程序员在需要更改程序而不是重写整个源代码时经常使用此命令。</p><h3 id="20-tar-command"><a href="#20-tar-command" class="headerlink" title="20. tar command"></a>20. tar command</h3><p>该命令是最常用的命令归档多个文件到一个压缩包-类似于zip格式常见的Linux文件格式，压缩是可选的。</p><h3 id="21-chmod-command"><a href="#21-chmod-command" class="headerlink" title="21. chmod command"></a>21. chmod command</h3><p>chmod是另一个Linux命令，用于更改文件和目录的读取，写入和执行权限。由于此命令相当复杂，因此您可以阅读完整的教程以正确执行它。</p><h3 id="22-chown-command"><a href="#22-chown-command" class="headerlink" title="22. chown command"></a>22. chown command</h3><p>在Linux中，所有文件均归特定用户所有。该CHOWN命令使您可以更改或文件的所有权转让给指定的用户名。例如，chown linuxuser2 file.ext将使linuxuser2成为file.ext的所有者。</p><h3 id="23-Jobs-command"><a href="#23-Jobs-command" class="headerlink" title="23. Jobs command"></a>23. Jobs command</h3><p>jobs命令将显示所有当前作业及其状态。作业基本上是由Shell启动的进程。</p><h3 id="24-kill-command"><a href="#24-kill-command" class="headerlink" title="24. kill command"></a>24. kill command</h3><p>如果您的程序无响应，则可以使用kill命令手动终止它。它将向运行不正常的应用发送特定信号，并指示该应用自行终止。</p><h3 id="25-ping-command"><a href="#25-ping-command" class="headerlink" title="25. ping command"></a>25. ping command</h3><p>使用ping命令检查与服务器的连接状态。例如，只需输入ping <a href="http://google.com,该命令将检查您是否能够连接到google并测量响应时间./">http://google.com，该命令将检查您是否能够连接到Google并测量响应时间。</a></p><h3 id="26-wget-command"><a href="#26-wget-command" class="headerlink" title="26. wget command"></a>26. wget command</h3><p>Linux命令行非常有用-您甚至可以在wget命令的帮助下从Internet下载文件。为此，只需键入wget，然后输入下载链接。</p><h3 id="27-uname-command"><a href="#27-uname-command" class="headerlink" title="27. uname command"></a>27. uname command</h3><p>该UNAME命令，短期对于Unix名，将打印您的Linux系统，如计算机名称的详细信息，操作系统，内核，等等。</p><h3 id="28-top-command"><a href="#28-top-command" class="headerlink" title="28. top command"></a>28. top command</h3><p>作为与Windows中的任务管理器等效的终端，top命令将显示正在运行的进程以及每个进程使用多少CPU的列表。监视系统资源的使用非常有用，尤其是知道哪个进程由于消耗太多资源而需要终止时。</p><h3 id="29-history-command"><a href="#29-history-command" class="headerlink" title="29. history command"></a>29. history command</h3><p>使用Linux一段时间后，您会很快注意到每天可以运行数百个命令。因此，如果您想查看之前输入的命令，运行历史记录命令特别有用。</p><h3 id="30-man-command"><a href="#30-man-command" class="headerlink" title="30. man command"></a>30. man command</h3><p>对某些Linux命令的功能感到困惑？不用担心，您可以使用man命令从Linux的外壳中轻松学习如何使用它们。例如，输入man tail将显示tail命令的手动指令。</p><h3 id="31-echo-command"><a href="#31-echo-command" class="headerlink" title="31. echo command"></a>31. echo command</h3><p>此命令用于将一些数据移到文件中。例如，如果要将文本“ Hello，我的名字叫约翰”添加到名为name.txt的文件中，则可以键入echo Hello，我的名字是John &gt;&gt; name.txt</p><h3 id="32-zip，unzip-command"><a href="#32-zip，unzip-command" class="headerlink" title="32. zip，unzip command"></a>32. zip，unzip command</h3><p>使用zip命令将文件压缩到zip存档中，然后使用unzip命令从zip存档中提取压缩文件。</p><h3 id="33-hostname-command"><a href="#33-hostname-command" class="headerlink" title="33. hostname command"></a>33. hostname command</h3><p>如果您想知道主机&#x2F;网络的名称，只需键入hostname。在末尾添加-I将显示网络的IP地址。</p><h3 id="34-useradd，userdel-command"><a href="#34-useradd，userdel-command" class="headerlink" title="34. useradd，userdel command"></a>34. useradd，userdel command</h3><p>由于Linux是多用户系统，因此这意味着多个人可以同时与同一个系统进行交互。useradd用于创建新用户，而passwd将密码添加到该用户的帐户。要添加一个名为John的新用户，请添加user John，然后添加其密码类型passwd 123456789。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;1-pwd-command&quot;&gt;&lt;a href=&quot;#1-pwd-command&quot; class=&quot;headerlink&quot; title=&quot;1. pwd command&quot;&gt;&lt;/a&gt;1. pwd command&lt;/h3&gt;&lt;p&gt;使用pwd命令找出您所在的当前工作目录（文件夹）</summary>
+      
+    
+    
+    
+    
+    <category term="linux" scheme="http://example.com/tags/linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>music</title>
+    <link href="http://example.com/posts/cd52224a.html"/>
+    <id>http://example.com/posts/cd52224a.html</id>
+    <published>2022-10-11T11:34:27.000Z</published>
+    <updated>2022-10-11T11:42:17.864Z</updated>
+    
+    <content type="html"><![CDATA[<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=434656462&auto=0&height=66"></iframe>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=330 height=86 src=&quot;//music.163.com/outchain/player?type=2&amp;id=4346</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>WEB浏览器服务器区别</title>
+    <link href="http://example.com/posts/711a0338.html"/>
+    <id>http://example.com/posts/711a0338.html</id>
+    <published>2022-10-10T10:42:43.000Z</published>
+    <updated>2022-11-14T11:12:22.091Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="什么是Web服务器？Web服务器软件有哪些？"><a href="#什么是Web服务器？Web服务器软件有哪些？" class="headerlink" title="什么是Web服务器？Web服务器软件有哪些？"></a>什么是Web服务器？Web服务器软件有哪些？</h1><h2 id="什么是Web服务器？"><a href="#什么是Web服务器？" class="headerlink" title="什么是Web服务器？"></a>什么是Web服务器？</h2><p>我们最常说的Web服务器指的是网站服务器，它是建立在Internet之上并且驻留在某种计算机上的程序。Web服务器可以向Web客户端(如浏览器)提供文档或其他服务，只要是遵循HTTP协议而设计的网络应用程序都可以是Web客户端。</p><p>Web服务器的工作原理可以分为以下四个步骤:</p><p>①连接过程:是Web服务器与其浏览器之间建立的连接。检查连接过程是否实现。用户可以找到并打开虚拟文件套接字。该文件的建立意味着连接过程已经成功建立。</p><p>②请求过程:Web浏览器利用socket文件向其服务器发出各种请求。</p><p>③响应过程:在请求过程中发出的请求通过使用HTTP协议传输到Web服务器，然后执行任务处理。然后，通过使用HTTP协议将任务处理的结果传送到网络浏览器，并且在网络浏览器上显示所请求的界面。</p><p>④关闭连接:是最后一步——响应过程完成后，Web服务器与其浏览器断开连接的过程。Web服务器的上述四个步骤联系紧密，逻辑严密，可以支持多进程、多线程以及多进程、多线程混合的技术。</p><h2 id="Web服务器软件有哪些？"><a href="#Web服务器软件有哪些？" class="headerlink" title="Web服务器软件有哪些？"></a>Web服务器软件有哪些？</h2><p>目前主流的web服务器主要是Apache、Nginx、IIS，还有较多使用的Tomcat、Jetty、WebSphere，WebLogic，Kerstrel等。下图为市场占有率历史数据，Apache占有率较高，但是在前1K网站排名中，Nginx占有率最高。</p><div align=center><img src="https://img-blog.csdnimg.cn/img_convert/4345f1d6de10b468a88ef3057b7a7a86.png"/></div><h1 id="什么是Web浏览器？Web浏览器软件有哪些？"><a href="#什么是Web浏览器？Web浏览器软件有哪些？" class="headerlink" title="什么是Web浏览器？Web浏览器软件有哪些？"></a>什么是Web浏览器？Web浏览器软件有哪些？</h1><h2 id="什么是Web浏览器？"><a href="#什么是Web浏览器？" class="headerlink" title="什么是Web浏览器？"></a>什么是Web浏览器？</h2><p>网页浏览器（英语：web browser），常被简称为浏览器，是一种用于检索并展示万维网信息资源的应用程序。这些信息资源可为网页、图片、影音或其他内容，它们由统一资源标志符标志。信息资源中的超链接可使用户方便地浏览相关信息。</p><h2 id="Web浏览器软件有哪些？"><a href="#Web浏览器软件有哪些？" class="headerlink" title="Web浏览器软件有哪些？"></a>Web浏览器软件有哪些？</h2><p>主流网页浏览器主要指的是Mozilla Firefox、Internet Explorer、Microsoft Edge、Google Chrome、Opera及Safari。</p><div align=center><img src="https://img-blog.csdnimg.cn/img_convert/06ebc40393bf82200f41ebb230fa5d9b.png"/></div><h1 id="安装一个网站软件与安装一个桌面软件有什么不同？"><a href="#安装一个网站软件与安装一个桌面软件有什么不同？" class="headerlink" title="安装一个网站软件与安装一个桌面软件有什么不同？"></a>安装一个网站软件与安装一个桌面软件有什么不同？</h1><p> 一、网站软件无需安装即可使用，桌面软件需要安装到本地。</p><p>二、一般来说桌面app相应速度更快。</p><p>三、桌面软件不需要浏览器支持，web应用程序依赖浏览器执行。</p><p>四、桌面app以Windows窗口形式存在。</p><p>五、桌面软件更新需要重新安装下载，web应用只要作者在服务器上安装以此就可以通过网络给所有<br>客户端共享，不需要重新下载.只需要修改服务器上Web应用程序，则所有的客户端自动进行更新。</p><h1 id="安装和运行wordpress必须依赖哪些软件？这些软件各自的职能是什么？"><a href="#安装和运行wordpress必须依赖哪些软件？这些软件各自的职能是什么？" class="headerlink" title="安装和运行wordpress必须依赖哪些软件？这些软件各自的职能是什么？"></a>安装和运行wordpress必须依赖哪些软件？这些软件各自的职能是什么？</h1><p>PHP7.4 或更高版本：让php代码能够在我们电脑本地跑起来</p><p>MySQL 5.6：一般而言，MySQL会是更熟悉的选择，这种数据库管理系统是为了方便我们管理数据库，能够将网站需要的数据信息稳妥存放。</p><p>apache&#x2F;nginx：web服务器应用程序，让我们的电脑可以像一台服务器那样提供http服务。</p><p>为了方便，我选择集成环境phpstudy。<br><a href="https://www.xp.cn/">phpstudy</a></p><h1 id="安装hexo必须依赖哪些软件？这些软件各自的职能是什么？"><a href="#安装hexo必须依赖哪些软件？这些软件各自的职能是什么？" class="headerlink" title="安装hexo必须依赖哪些软件？这些软件各自的职能是什么？"></a>安装hexo必须依赖哪些软件？这些软件各自的职能是什么？</h1><ul><li><p>Node.js:一个基于Chrome V8 引擎的 JavaScript 运行环境。它让JavaScript可以开发后端程序。</p></li><li><p>npm：node.js的包管理工具。安装hexo时用于下载hexo、hexo sever包。</p></li><li><p>Git：一个版本控制系统。在 hexo中主要用于执行清除缓存文件、生成静态网页、启动本地服务器和部署到云端服务器等操作。</p></li></ul><h1 id="运行hexo所生成的网站依赖哪些软件？"><a href="#运行hexo所生成的网站依赖哪些软件？" class="headerlink" title="运行hexo所生成的网站依赖哪些软件？"></a>运行hexo所生成的网站依赖哪些软件？</h1><p>hexo生成的是静态网页</p><p>通常静态网页的工作机制为：</p><ol><li><p>使用HTML编写静态页面，发布到WEB服务器端；</p></li><li><p>客户端通过浏览器请求该静态页面；</p></li><li><p>Web服务器根据请求定位该静态页面；</p></li><li><p>该静态页面以HTML流的形式返回客户端；</p></li><li><p>客户端浏览器解释HTML流，并显示为WEB页面。</p></li></ol><p>github pages 或Gitee pages 或web服务器</p><h1 id="使用hexo生成一个网站，需要经历哪几个关键步骤？"><a href="#使用hexo生成一个网站，需要经历哪几个关键步骤？" class="headerlink" title="使用hexo生成一个网站，需要经历哪几个关键步骤？"></a>使用hexo生成一个网站，需要经历哪几个关键步骤？</h1><pre><code>首先需要安装依赖的软件</code></pre><h2 id="1-安装hexo-任意路径-git-bash-here"><a href="#1-安装hexo-任意路径-git-bash-here" class="headerlink" title="1. 安装hexo 任意路径 git bash here"></a>1. 安装hexo 任意路径 git bash here</h2><p><code>npm install -g hexo-cli</code></p><h2 id="2-初始化站点、安装项目依赖包（第三方nodejs类库或工具）"><a href="#2-初始化站点、安装项目依赖包（第三方nodejs类库或工具）" class="headerlink" title="2. 初始化站点、安装项目依赖包（第三方nodejs类库或工具）"></a>2. 初始化站点、安装项目依赖包（第三方nodejs类库或工具）</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo init blog</span><br><span class="line">cd blog</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure><h3 id="命令说明："><a href="#命令说明：" class="headerlink" title="命令说明："></a><strong>命令说明：</strong></h3><p>hexo: 是hexo的命令</p><p>init: hexo的子命令，用于初始化一个博客系统．</p><p>blog: 是博客系统的名字，这里我没有考虑太多，直接将博客系统的名字命名为blog,　你可以根据自己的喜好设定名字．</p><p>初始化完成后的简要目录结构如下:</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">./blog</span><br><span class="line">    ├── _config.landscape.yml</span><br><span class="line">    ├── _config.yml</span><br><span class="line">    ├── db.json</span><br><span class="line">    ├── node_modules</span><br><span class="line">    ├── package.json</span><br><span class="line">    ├── package-lock.json</span><br><span class="line">    ├── scaffolds</span><br><span class="line">    ├── source</span><br><span class="line">    └── themes</span><br></pre></td></tr></table></figure><h3 id="目录结构说明"><a href="#目录结构说明" class="headerlink" title="目录结构说明"></a><strong>目录结构说明</strong></h3><p>package.json: 这个是nodejs要用到的，里面存放着项目信息，版本，项目所依赖的第三方nodejs工具和代码库</p><p>package-lock.json: 这个nodejs解析依赖包时会用到的</p><p>scaffolds: 博客脚手架，当你创建新的博文时可以基于其中的某个模板进行修改．</p><p>source: 源代码文件夹，这里存放你网站的内容．</p><p>themes: 主题，博客css样式，背景图片等等．</p><p>node_modules: 这里存放npm install时从网络下载下来的依赖包</p><p>config.yml 项目配置文件</p><h3 id="配置文件详细说明"><a href="#配置文件详细说明" class="headerlink" title="配置文件详细说明"></a><strong>配置文件详细说明</strong></h3><p>这里重点说明一下项目配置文件．</p><p>你可以修改项目的默认配置文件_config.yml以满足你个人的需求．比如标题，网站的描述，搜索关键字等等一些信息</p><table><thead><tr><th>setting</th><th>chines</th><th>desc</th></tr></thead><tbody><tr><td>title</td><td>标题</td><td>你网站的标题</td></tr><tr><td>subtitle</td><td>子标题</td><td>你网站的子标题</td></tr><tr><td>description</td><td>网站描述</td><td>你网站的描述信息</td></tr><tr><td>keywords</td><td>关键字</td><td>关键字</td></tr><tr><td>author</td><td>作者</td><td>网站的作者</td></tr><tr><td>language</td><td>语言</td><td>网站支持的语言</td></tr></tbody></table><h2 id="3-启动博客系统"><a href="#3-启动博客系统" class="headerlink" title="3.启动博客系统"></a>3.启动博客系统</h2><p><code>　hexo server</code></p><p>如果启动成功，会输出以下信息，最后一行会提示，通过什么网址可以访问博客．</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$hexo server</span><br><span class="line">INFO  Validating config</span><br><span class="line">INFO  Start processing</span><br><span class="line">INFO  Hexo is running at http://localhost:4000 . Press Ctrl+C to stop.</span><br></pre></td></tr></table></figure><p>打开浏览器，将网址粘贴到浏览器即可访问到博客系统．</p><h2 id="4-创建文章"><a href="#4-创建文章" class="headerlink" title="4.创建文章"></a>4.创建文章</h2><p>进入blog文件目录 git bash here</p><p> <code>hexo new 文章名</code></p><p>然后进入source 目录 _post 目录下找到文章使用markdown语法编写文章。</p><h1 id="使用wordpress构建的博客网站与使用hexo构建的博客网站有什么不同？"><a href="#使用wordpress构建的博客网站与使用hexo构建的博客网站有什么不同？" class="headerlink" title="使用wordpress构建的博客网站与使用hexo构建的博客网站有什么不同？"></a>使用wordpress构建的博客网站与使用hexo构建的博客网站有什么不同？</h1><ol><li>WordPress 拥有完整的后台管理系统及数据库，编辑文章、管理界面等操作在后台管理系统完成。hexo 添加文章、魔改等操作都在本地文件操作，完成后生成静态页面，再部署到网络上。</li><li>WordPress有丰富的主题和插件库。hexo主要用npm 包安装工具下载主题和插件。</li><li>WordPress用古腾堡编辑器 在创作时将文章内容分为一个一个的“块”。 hexo使用 markdown 语法写文章，编辑文章后需要在本地生成静态网页，然后同步到服务器。</li><li>要部署到网上 WordPress要购买服务器，hexo有免费托管软件。</li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;什么是Web服务器？Web服务器软件有哪些？&quot;&gt;&lt;a href=&quot;#什么是Web服务器？Web服务器软件有哪些？&quot; class=&quot;headerlink&quot; title=&quot;什么是Web服务器？Web服务器软件有哪些？&quot;&gt;&lt;/a&gt;什么是Web服务器？Web服务器软件有哪</summary>
+      
+    
+    
+    
+    
+    <category term="WEB" scheme="http://example.com/tags/WEB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>blbl</title>
+    <link href="http://example.com/posts/e269f686.html"/>
+    <id>http://example.com/posts/e269f686.html</id>
+    <published>2022-10-05T13:18:26.000Z</published>
+    <updated>2022-10-05T13:19:28.256Z</updated>
+    
+    <content type="html"><![CDATA[<div style="position: relative; width: 100%; height: 0; padding-bottom: 75%;">    <iframe src="//player.bilibili.com/player.html?aid=206890880&bvid=BV1Ah411z7Po&cid=378344365&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position:absolute; height: 100%; width: 100%;"> </iframe></div>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;div style=&quot;position: relative; width: 100%; height: 0; padding-bottom: 75%;&quot;&gt;
+    &lt;iframe src=&quot;//player.bilibili.com/player.html?aid=206890</summary>
+      
+    
+    
+    
+    
+    <category term="test" scheme="http://example.com/tags/test/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>test</title>
+    <link href="http://example.com/posts/d87f7e0c.html"/>
+    <id>http://example.com/posts/d87f7e0c.html</id>
+    <published>2022-10-05T03:44:26.000Z</published>
+    <updated>2022-10-05T03:44:38.369Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>test aagain</title>
+    <link href="http://example.com/posts/aa107651.html"/>
+    <id>http://example.com/posts/aa107651.html</id>
+    <published>2022-10-05T02:56:09.000Z</published>
+    <updated>2022-10-05T04:47:04.442Z</updated>
+    
+    <content type="html"><![CDATA[<p>哪个英文字母最酷？ <span class="hide-inline"><button type="button" class="hide-button" style="background-color: #FF7242;color: #fff">查看答案  </button><span class="hide-content">因为西装裤(C装酷)</span></span><br>门里站着一个人? <span class="hide-inline"><button type="button" class="hide-button" style="">Click  </button><span class="hide-content">闪</span></span></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;哪个英文字母最酷？ &lt;span class=&quot;hide-inline&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;hide-button&quot; style=&quot;background-color: #FF7242;color: #fff&quot;&gt;查看答案
+  &lt;/butt</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>test</title>
+    <link href="http://example.com/posts/d87f7e0c.html"/>
+    <id>http://example.com/posts/d87f7e0c.html</id>
+    <published>2022-10-05T02:13:49.000Z</published>
+    <updated>2022-10-05T02:53:44.428Z</updated>
+    
+    <content type="html"><![CDATA[<p>hello</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;hello&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>MARKDOWN</title>
+    <link href="http://example.com/posts/12.html"/>
+    <id>http://example.com/posts/12.html</id>
+    <published>2022-09-27T12:37:02.000Z</published>
+    <updated>2022-10-02T11:34:02.284Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="我的个人简历"><a href="#我的个人简历" class="headerlink" title="我的个人简历"></a>我的个人简历</h1><h2 id="诗："><a href="#诗：" class="headerlink" title="诗："></a>诗：</h2><blockquote><p>临江仙·送钱穆父<br>【作者】苏轼 【朝代】宋<br>一别都门三改火，天涯踏尽红尘。依然一笑作春温。无波真古井，有节是秋筠。<br>惆怅孤帆连夜发，送行淡月微云。尊前不用翠眉颦。人生如逆旅，我亦是行人。</p></blockquote><h2 id="爱好："><a href="#爱好：" class="headerlink" title="爱好："></a>爱好：</h2><ul><li>听音乐</li></ul><h2 id="网站："><a href="#网站：" class="headerlink" title="网站："></a>网站：</h2><p>哔哩哔哩：<a href="https://www.bilibili.com/">https://www.bilibili.com/</a></p><p>CSDN:<a href="https://www.csdn.net/">https://www.csdn.net/</a></p><h2 id="喜欢的表情包："><a href="#喜欢的表情包：" class="headerlink" title="喜欢的表情包："></a>喜欢的表情包：</h2><p><img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fc-ssl.duitang.com%2Fuploads%2Fitem%2F202003%2F22%2F20200322152822_edtrn.thumb.1000_0.jpeg&refer=http%3A%2F%2Fc-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1666254419&t=72a89fd4383cc5454d0904f3e5ee8a78%22%E5%8F%AF%E7%88%B1%E7%9A%84%E4%B8%80%E4%BA%8C%E7%86%8A%22" alt="一二熊"></p><h2 id="简单代码："><a href="#简单代码：" class="headerlink" title="简单代码："></a>简单代码：</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p><code>printf()</code></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;我的个人简历&quot;&gt;&lt;a href=&quot;#我的个人简历&quot; class=&quot;headerlink&quot; title=&quot;我的个人简历&quot;&gt;&lt;/a&gt;我的个人简历&lt;/h1&gt;&lt;h2 id=&quot;诗：&quot;&gt;&lt;a href=&quot;#诗：&quot; class=&quot;headerlink&quot; title=&quot;诗：&quot;&gt;&lt;</summary>
+      
+    
+    
+    
+    <category term="test" scheme="http://example.com/categories/test/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://example.com/posts/4a17b156.html"/>
+    <id>http://example.com/posts/4a17b156.html</id>
+    <published>2022-09-27T10:19:34.308Z</published>
+    <updated>2022-09-27T13:19:49.657Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt; for</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+</feed>
